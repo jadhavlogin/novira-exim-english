@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Import-Export Business Complete Guide | Novira Exim</title>
+  <meta name="description" content="Import-Export Business Complete Guide — every step from product selection to your first export shipment, in simple English. Printed hard copy." />
+  <meta property="og:title" content="Import-Export Business Complete Guide — Until Your First Export Shipment" />
+  <meta property="og:description" content="Product, buyer, IEC, customs, shipping, documents and payment — explained step by step in simple English. Printed hard copy." />
+  <meta property="og:image" content="assets/complete-guide.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #fbf6ee;
+      --paper: #fffdf8;
+      --sand: #f1e6d4;
+      --ink: #14213d;
+      --ink-soft: #4a5468;
+      --orange: #e8590c;
+      --orange-soft: #ff8a3d;
+      --amber: #f5b724;
+      --line: #e6d9c3;
+      --radius: 18px;
+      --max: 1140px;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html { scroll-behavior: smooth; }
+    html, body { overflow-x: clip; }
+    body {
+      margin: 0; background: var(--cream); color: var(--ink);
+      font: 17px/1.65 "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; }
+    h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 800; line-height: 1.08; margin: 0 0 .45em; letter-spacing: -.015em; }
+    h2 { font-size: clamp(2rem, 4.4vw, 3.1rem); }
+    p { margin: 0 0 1em; }
+    em { font-style: italic; color: var(--orange); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    section { padding: 88px 0; }
+    .kicker {
+      display: inline-flex; align-items: center; gap: 10px; margin-bottom: 18px;
+      font: 500 .78rem/1 "JetBrains Mono", monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--orange);
+    }
+    .kicker::before { content: ""; width: 26px; height: 2px; background: currentColor; }
+    .lead { font-size: 1.15rem; color: var(--ink-soft); max-width: 640px; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer;
+      font: 700 1.02rem/1 "DM Sans", sans-serif; text-decoration: none;
+      padding: 18px 30px; border-radius: 12px; border: 2px solid var(--ink);
+      background: var(--orange); color: #fff; box-shadow: 5px 5px 0 var(--ink);
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--ink); }
+    .btn:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--ink); }
+    .btn svg { width: 20px; height: 20px; }
+    .btn-plain { background: transparent; color: var(--ink); box-shadow: none; border-color: transparent; padding-left: 6px; text-decoration: underline; text-underline-offset: 5px; }
+    .btn-plain:hover { box-shadow: none; transform: none; color: var(--orange); }
+
+    /* Header */
+    header { padding: 20px 0; }
+    header .wrap { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font: 800 1.35rem "Fraunces", serif; text-decoration: none; letter-spacing: -.01em; }
+    .logo span { color: var(--orange); }
+    header nav { display: flex; gap: 28px; align-items: center; font-weight: 500; }
+    header nav a { text-decoration: none; }
+    header nav a:not(.btn):hover { color: var(--orange); }
+    header .btn { padding: 12px 20px; font-size: .92rem; box-shadow: 3px 3px 0 var(--ink); }
+
+    /* Hero */
+    .hero { padding: 40px 0 70px; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+    .hero h1 { font-size: clamp(2.6rem, 6.4vw, 5rem); }
+    .hero h1 .u { position: relative; white-space: nowrap; }
+    .hero h1 .u::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: .06em; height: .2em; z-index: -1;
+      background: var(--amber); border-radius: 4px; transform: rotate(-1deg);
+    }
+    .hero .lead { margin-bottom: 30px; }
+    .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .meta-row { display: flex; gap: 26px; flex-wrap: wrap; margin-top: 36px; padding-top: 24px; border-top: 1px dashed var(--line); }
+    .meta-row div { font-size: .92rem; color: var(--ink-soft); }
+    .meta-row strong { display: block; font: 800 1.35rem "Fraunces", serif; color: var(--ink); }
+
+    .stage { position: relative; display: grid; place-items: center; padding: 30px 0; }
+    .stage .sun {
+      position: absolute; width: 88%; aspect-ratio: 1; border-radius: 50%;
+      background: radial-gradient(circle at 50% 60%, var(--orange-soft), var(--amber) 55%, transparent 72%); opacity: .55;
+    }
+    .stage img.cover {
+      position: relative; width: min(340px, 78%); border-radius: 4px 10px 10px 4px;
+      box-shadow: -14px 24px 40px rgba(20,33,61,.35); transform: rotate(-4deg);
+    }
+    .sticker {
+      position: absolute; right: 2%; bottom: 12%; width: 128px; height: 128px; border-radius: 50%;
+      background: var(--ink); color: var(--cream); display: grid; place-items: center; text-align: center;
+      font: 700 .78rem/1.25 "DM Sans", sans-serif; text-transform: uppercase; letter-spacing: .06em;
+      transform: rotate(10deg); border: 3px dashed var(--amber); outline: 6px solid var(--ink);
+    }
+    .sticker b { display: block; font: 800 1.5rem/1.05 "Fraunces", serif; color: var(--amber); text-transform: none; letter-spacing: 0; }
+
+    /* Ribbon */
+    .ribbon { background: var(--ink); color: var(--cream); overflow: hidden; padding: 16px 0; transform: rotate(-1.2deg); margin: 0 -10px; }
+    .ribbon-track { display: flex; gap: 0; width: max-content; animation: slide 28s linear infinite; }
+    .ribbon span { font: 500 1rem "JetBrains Mono", monospace; letter-spacing: .14em; text-transform: uppercase; padding: 0 22px; white-space: nowrap; }
+    .ribbon span::after { content: "✦"; color: var(--amber); margin-left: 44px; }
+    @keyframes slide { to { transform: translateX(-50%); } }
+
+    /* Questions */
+    .qs { display: grid; grid-template-columns: .9fr 1.1fr; gap: 60px; align-items: start; }
+    .qs .sticky { position: sticky; top: 30px; }
+    .q-list { list-style: none; margin: 0; padding: 0; counter-reset: q; }
+    .q-list li {
+      counter-increment: q; display: grid; grid-template-columns: 56px 1fr; gap: 16px;
+      padding: 24px 0; border-bottom: 1px solid var(--line);
+    }
+    .q-list li:first-child { padding-top: 0; }
+    .q-list li::before {
+      content: "0" counter(q); font: 800 1.9rem/1 "Fraunces", serif; color: var(--orange);
+    }
+    .q-list h3 { font-size: 1.3rem; margin-bottom: 6px; }
+    .q-list p { color: var(--ink-soft); margin: 0; }
+
+    /* Table of contents */
+    .toc-sec { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .toc-head { display: flex; justify-content: space-between; align-items: end; gap: 30px; flex-wrap: wrap; margin-bottom: 44px; }
+    .toc { display: grid; grid-template-columns: 1fr 1fr; column-gap: 60px; }
+    .toc a {
+      display: grid; grid-template-columns: 54px 1fr auto; gap: 14px; align-items: baseline;
+      padding: 18px 0; border-bottom: 1px dotted #cbbb9f; text-decoration: none;
+      transition: padding .2s ease, color .2s ease;
+    }
+    .toc a:hover { padding-left: 8px; color: var(--orange); }
+    .toc .n { font: 500 .85rem "JetBrains Mono", monospace; color: var(--orange); }
+    .toc .t { font: 700 1.15rem "Fraunces", serif; }
+    .toc .t small { display: block; font: 400 .92rem "DM Sans", sans-serif; color: var(--ink-soft); margin-top: 3px; }
+    .toc .tag { font: 500 .72rem "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); background: var(--sand); padding: 4px 8px; border-radius: 6px; }
+
+    /* Route */
+    .route-sec { background: var(--ink); color: var(--cream); position: relative; overflow: hidden; }
+    .route-sec .lead { color: #c9cfdb; }
+    .route-sec .kicker { color: var(--amber); }
+    .route { position: relative; margin-top: 56px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+    .route::before {
+      content: ""; position: absolute; left: 0; right: 0; top: 26px; height: 3px;
+      background: repeating-linear-gradient(90deg, var(--amber) 0 14px, transparent 14px 24px);
+    }
+    .stop { position: relative; }
+    .stop .pin {
+      width: 54px; height: 54px; border-radius: 12px; background: var(--amber); color: var(--ink);
+      display: grid; place-items: center; font: 800 1.2rem "Fraunces", serif; border: 3px solid var(--cream); margin-bottom: 18px;
+    }
+    .stop:nth-child(even) .pin { background: var(--orange); color: #fff; }
+    .stop h3 { font-size: 1.2rem; margin-bottom: 4px; color: #fff; }
+    .stop p { font-size: .92rem; color: #aeb6c6; margin: 0; }
+
+    /* Gallery / paths */
+    .paths { display: grid; grid-template-columns: 1.2fr .8fr; grid-template-rows: auto auto; gap: 22px; margin-top: 44px; }
+    .paths figure { margin: 0; position: relative; border-radius: var(--radius); overflow: hidden; border: 2px solid var(--ink); background: var(--ink); }
+    .paths figure:first-child { grid-row: span 2; }
+    .paths img { width: 100%; height: 100%; object-fit: cover; }
+    .paths figcaption {
+      position: absolute; left: 14px; bottom: 14px; background: var(--cream); color: var(--ink);
+      padding: 8px 14px; border-radius: 8px; font: 700 .92rem "DM Sans", sans-serif; border: 2px solid var(--ink);
+    }
+
+    /* Who */
+    .who { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 44px; border: 2px solid var(--ink); border-radius: var(--radius); overflow: hidden; background: var(--paper); }
+    .who > div { padding: 28px 24px; border-right: 2px solid var(--ink); }
+    .who > div:last-child { border-right: 0; }
+    .who .emoji { font-size: 1.9rem; margin-bottom: 10px; }
+    .who h3 { font-size: 1.2rem; }
+    .who p { color: var(--ink-soft); margin: 0; font-size: .95rem; }
+
+    /* Quote band */
+    .band { text-align: center; padding: 70px 0; }
+    .band blockquote { margin: 0 auto; max-width: 860px; font: 800 clamp(1.9rem, 4.6vw, 3.4rem)/1.1 "Fraunces", serif; letter-spacing: -.02em; }
+    .band cite { display: block; margin-top: 18px; font: 500 .85rem "JetBrains Mono", monospace; font-style: normal; color: var(--ink-soft); letter-spacing: .1em; text-transform: uppercase; }
+
+    /* Shipping-label order card */
+    .order-sec { background: var(--sand); }
+    .label {
+      display: grid; grid-template-columns: 280px 1fr; background: var(--paper);
+      border: 2px solid var(--ink); border-radius: 22px; box-shadow: 10px 10px 0 var(--ink); overflow: hidden;
+    }
+    .label .left {
+      background: var(--ink); padding: 34px 28px; display: grid; place-items: center; position: relative;
+      border-right: 2px dashed var(--cream);
+    }
+    .label .left img { width: 100%; max-width: 210px; border-radius: 3px 8px 8px 3px; box-shadow: 0 18px 30px rgba(0,0,0,.4); }
+    .label .right { padding: 34px 38px; }
+    .label-top { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font: 500 .78rem "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-soft); padding-bottom: 16px; border-bottom: 2px solid var(--ink); margin-bottom: 22px; }
+    .label-top b { color: var(--orange); }
+    .label h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); margin-bottom: 8px; }
+    .fields { display: grid; grid-template-columns: repeat(3, 1fr); border: 2px solid var(--ink); border-radius: 10px; margin: 22px 0; overflow: hidden; }
+    .fields div { padding: 12px 14px; border-right: 2px solid var(--ink); }
+    .fields div:last-child { border-right: 0; }
+    .fields small { display: block; font: 500 .68rem "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-soft); }
+    .fields strong { font-size: 1rem; }
+    .price-line { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+    .price-now { font: 800 3rem/1 "Fraunces", serif; color: var(--orange); }
+    .price-mrp { font-size: 1.2rem; color: var(--ink-soft); text-decoration: line-through; }
+    .price-save { background: var(--amber); color: var(--ink); font: 700 .8rem "DM Sans", sans-serif; padding: 5px 10px; border-radius: 6px; border: 2px solid var(--ink); }
+    .incl { list-style: none; padding: 0; margin: 0 0 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px; }
+    .incl li { display: flex; gap: 10px; align-items: flex-start; font-size: .97rem; }
+    .incl li::before { content: "✓"; flex: none; font-weight: 700; color: #fff; background: var(--orange); width: 22px; height: 22px; border-radius: 6px; display: grid; place-items: center; font-size: .8rem; margin-top: 2px; }
+    .order-ctas { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .btn-wa { background: #25d366; color: var(--ink); }
+    .barcode { margin-top: 24px; height: 44px; max-width: 320px; background: repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 4px, var(--ink) 4px 7px, transparent 7px 9px, var(--ink) 9px 10px, transparent 10px 14px); opacity: .85; }
+    .barcode-t { font: 500 .72rem "JetBrains Mono", monospace; letter-spacing: .3em; color: var(--ink-soft); margin-top: 4px; }
+
+    /* FAQ */
+    .faq { display: grid; grid-template-columns: .8fr 1.2fr; gap: 60px; }
+    .faq details { border-bottom: 1px solid var(--line); }
+    .faq details:first-child { border-top: 1px solid var(--line); }
+    .faq summary {
+      list-style: none; cursor: pointer; padding: 22px 40px 22px 0; position: relative;
+      font: 700 1.2rem/1.3 "Fraunces", serif;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; position: absolute; right: 4px; top: 16px; font: 400 1.8rem "DM Sans", sans-serif; color: var(--orange); transition: transform .2s; }
+    .faq details[open] summary::after { transform: rotate(45deg); }
+    .faq details p { color: var(--ink-soft); padding-bottom: 22px; margin: 0; }
+
+    /* Footer */
+    .end { background: var(--orange); color: #fff; text-align: center; padding: 80px 0; }
+    .end h2 { font-size: clamp(2.2rem, 5.4vw, 4rem); }
+    .end .btn { background: var(--ink); border-color: var(--ink); box-shadow: 5px 5px 0 #fff; margin-top: 10px; }
+    .end .btn:hover { box-shadow: 7px 7px 0 #fff; }
+    footer { background: var(--ink); color: #aeb6c6; padding: 36px 0 110px; font-size: .9rem; }
+    footer .row { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+    footer .logo { color: var(--cream); }
+    footer .links { display: flex; gap: 20px; flex-wrap: wrap; }
+    footer a { text-decoration: none; color: #dfe3ea; }
+    footer a:hover { color: var(--amber); }
+    footer .fine { font-size: .8rem; color: #7d879b; border-top: 1px solid rgba(255,255,255,.1); padding-top: 16px; margin: 0; }
+
+    /* Mobile buy bar */
+    .buybar {
+      position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 50; display: none;
+      background: var(--paper); border: 2px solid var(--ink); border-radius: 14px; box-shadow: 4px 4px 0 var(--ink);
+      padding: 10px 10px 10px 16px; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .buybar .t { font: 700 .9rem/1.2 "DM Sans", sans-serif; }
+    .buybar .t span { display: block; color: var(--orange); font-family: "Fraunces", serif; font-size: 1.1rem; }
+    .buybar .btn { padding: 12px 18px; font-size: .92rem; box-shadow: 3px 3px 0 var(--ink); }
+
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .ribbon-track { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid, .qs, .faq { grid-template-columns: 1fr; gap: 36px; }
+      .stage { order: -1; }
+      .qs .sticky { position: static; }
+      .toc { grid-template-columns: 1fr; }
+      .route { grid-template-columns: repeat(3, 1fr); row-gap: 36px; }
+      .route::before { display: none; }
+      .who { grid-template-columns: 1fr 1fr; }
+      .who > div:nth-child(2) { border-right: 0; }
+      .who > div:nth-child(-n+2) { border-bottom: 2px solid var(--ink); }
+      .label { grid-template-columns: 1fr; }
+      .label .left { border-right: 0; border-bottom: 2px dashed var(--cream); }
+      .label .left img { max-width: 170px; }
+    }
+    @media (max-width: 640px) {
+      section { padding: 64px 0; }
+      .wrap { padding: 0 16px; }
+      header nav a:not(.btn) { display: none; }
+      .hero { padding-top: 10px; }
+      .stage img.cover { width: 220px; }
+      .hero-cta .btn:not(.btn-plain) { width: 100%; }
+      .sticker { width: 104px; height: 104px; font-size: .68rem; right: 0; }
+      .sticker b { font-size: 1.2rem; }
+      .route { grid-template-columns: 1fr 1fr; }
+      .paths { grid-template-columns: 1fr; }
+      .paths figure:first-child { grid-row: auto; }
+      .who { grid-template-columns: 1fr; }
+      .who > div { border-right: 0; border-bottom: 2px solid var(--ink); }
+      .who > div:last-child { border-bottom: 0; }
+      .label .right { padding: 26px 20px; }
+      .fields { grid-template-columns: 1fr; }
+      .fields div { border-right: 0; border-bottom: 2px solid var(--ink); }
+      .fields div:last-child { border-bottom: 0; }
+      .incl { grid-template-columns: 1fr; }
+      .order-ctas .btn { width: 100%; }
+      .toc a { grid-template-columns: 40px 1fr; }
+      .toc .tag { display: none; }
+      .buybar { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <a class="logo" href="#top">Novira<span>.</span>Exim</a>
+      <nav>
+        <a href="#contents">Contents</a>
+        <a href="#who">Who it's for</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn js-buy" href="#order">Order the book</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <span class="kicker">The guide is now in a book</span>
+        <h1>Your first <span class="u">export shipment</span> starts on page one.</h1>
+        <p class="lead">Want to start an export business from home but don't know where to begin? This book takes you from <strong>choosing a product</strong> to <strong>getting paid by a foreign buyer</strong> — every step, in simple English.</p>
+        <div class="hero-cta">
+          <a class="btn js-buy" href="#order">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2zM22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/></svg>
+            Get your copy
+          </a>
+          <a class="btn btn-plain" href="#contents">See the contents →</a>
+        </div>
+        <div class="meta-row">
+          <div><strong>English</strong>Simple language</div>
+          <div><strong>Hard copy</strong>Printed book</div>
+          <div><strong>A → Z</strong>Product to payment</div>
+        </div>
+      </div>
+      <div class="stage reveal">
+        <div class="sun"></div>
+        <img class="cover" src="assets/book-cover.jpg" alt="Import-Export Business Complete Guide — All the Way to Your First Export Shipment, book cover" width="740" height="950" />
+        <div class="sticker"><div><b class="js-price">Printed</b>Hard copy<br />delivered</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ribbon -->
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon-track">
+      <span>Product</span><span>Buyer</span><span>IEC</span><span>Customs</span><span>Shipping</span><span>Payment</span><span>Global</span>
+      <span>Product</span><span>Buyer</span><span>IEC</span><span>Customs</span><span>Shipping</span><span>Payment</span><span>Global</span>
+    </div>
+  </div>
+
+  <!-- Questions -->
+  <section>
+    <div class="wrap qs">
+      <div class="sticky reveal">
+        <span class="kicker">Low budget? Start with planning</span>
+        <h2>First <em>understand.</em><br />Then decide.</h2>
+        <p class="lead">Most beginners get stuck on the same six questions. This book answers them in order — before you spend a single rupee.</p>
+        <a class="btn js-buy" href="#order">Get the answers</a>
+      </div>
+      <ol class="q-list">
+        <li class="reveal"><div><h3>How do I select a product?</h3><p>Research demand, check export potential and pick a product that suits your budget.</p></div></li>
+        <li class="reveal"><div><h3>How do I estimate costs?</h3><p>Registration, samples, packaging, freight and margins — so nothing surprises you.</p></div></li>
+        <li class="reveal"><div><h3>What are the low-budget options?</h3><p>Ways to start small from home and grow step by step.</p></div></li>
+        <li class="reveal"><div><h3>Where do I find foreign buyers?</h3><p>Practical ways to find, contact and convince genuine international buyers.</p></div></li>
+        <li class="reveal"><div><h3>What are IEC, customs and shipping?</h3><p>Registration, clearance and logistics explained in plain language.</p></div></li>
+        <li class="reveal"><div><h3>How do I get paid safely?</h3><p>Documents, payment terms and how to protect yourself from payment risk.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Table of contents -->
+  <section class="toc-sec" id="contents">
+    <div class="wrap">
+      <div class="toc-head reveal">
+        <div>
+          <span class="kicker">Inside the book</span>
+          <h2>Table of contents</h2>
+        </div>
+        <p class="lead" style="margin:0;max-width:420px">One clear roadmap, in the exact order you'll work — until your first export shipment.</p>
+      </div>
+      <div class="toc">
+        <a href="#order" class="reveal"><span class="n">01</span><span class="t">Product Selection<small>Choose a product with real export demand</small></span><span class="tag">Plan</span></a>
+        <a href="#order" class="reveal"><span class="n">02</span><span class="t">Cost Estimation<small>Price your product and know your margins</small></span><span class="tag">Plan</span></a>
+        <a href="#order" class="reveal"><span class="n">03</span><span class="t">Low-Budget Options<small>Start small without heavy investment</small></span><span class="tag">Plan</span></a>
+        <a href="#order" class="reveal"><span class="n">04</span><span class="t">Supplier Selection<small>Find reliable manufacturers, check quality</small></span><span class="tag">Source</span></a>
+        <a href="#order" class="reveal"><span class="n">05</span><span class="t">IEC &amp; Registrations<small>Everything you need to get started legally</small></span><span class="tag">Setup</span></a>
+        <a href="#order" class="reveal"><span class="n">06</span><span class="t">Finding Foreign Buyers<small>Where to find them and how to approach</small></span><span class="tag">Sell</span></a>
+        <a href="#order" class="reveal"><span class="n">07</span><span class="t">E-commerce Export<small>Sell overseas online, ship from home</small></span><span class="tag">Sell</span></a>
+        <a href="#order" class="reveal"><span class="n">08</span><span class="t">Agri-Export Process<small>How farm produce reaches abroad</small></span><span class="tag">Sell</span></a>
+        <a href="#order" class="reveal"><span class="n">09</span><span class="t">Packaging Requirements<small>Export-grade packing and labelling</small></span><span class="tag">Ship</span></a>
+        <a href="#order" class="reveal"><span class="n">10</span><span class="t">Customs &amp; Shipping<small>Clearance, freight, containers, Incoterms</small></span><span class="tag">Ship</span></a>
+        <a href="#order" class="reveal"><span class="n">11</span><span class="t">Order to Shipping Process<small>The full flow, start to finish</small></span><span class="tag">Ship</span></a>
+        <a href="#order" class="reveal"><span class="n">12</span><span class="t">Documents &amp; Payment<small>Invoice, bill of lading, safe payment</small></span><span class="tag">Get paid</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Route -->
+  <section class="route-sec">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="kicker">Your route</span>
+        <h2>Six stops to your<br />first shipment.</h2>
+        <p class="lead">Product to buyer. IEC, customs &amp; shipping. Documents &amp; payment.</p>
+      </div>
+      <div class="route">
+        <div class="stop reveal"><div class="pin">1</div><h3>Product</h3><p>Choose what to export</p></div>
+        <div class="stop reveal"><div class="pin">2</div><h3>Buyer</h3><p>Find &amp; win buyers</p></div>
+        <div class="stop reveal"><div class="pin">3</div><h3>IEC</h3><p>Register your business</p></div>
+        <div class="stop reveal"><div class="pin">4</div><h3>Customs</h3><p>Clear your goods</p></div>
+        <div class="stop reveal"><div class="pin">5</div><h3>Shipping</h3><p>Send it worldwide</p></div>
+        <div class="stop reveal"><div class="pin">6</div><h3>Payment</h3><p>Get paid safely</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paths -->
+  <section>
+    <div class="wrap">
+      <div class="reveal">
+        <span class="kicker">One book, every path</span>
+        <h2>From home, from the farm,<br />or from a factory.</h2>
+      </div>
+      <div class="paths">
+        <figure class="reveal"><img src="assets/export-from-home.jpg" alt="Want to start an export business from home? E-commerce export, product and supplier selection, order to shipping process." loading="lazy" width="2000" height="1493" /><figcaption>Export from home</figcaption></figure>
+        <figure class="reveal"><img src="assets/agri-export.jpg" alt="How will your farm produce reach abroad? Agri-export process, packaging and documents, finding foreign buyers." loading="lazy" width="2000" height="1493" /><figcaption>Farm produce abroad</figcaption></figure>
+        <figure class="reveal"><img src="assets/low-budget-planning.jpg" alt="Low budget? Start with planning: select a product, estimate costs, low-budget options." loading="lazy" width="2000" height="1493" /><figcaption>Low-budget start</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who -->
+  <section style="padding-top:0" id="who">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="kicker">Who it's for</span>
+        <h2>Written for first-timers.</h2>
+      </div>
+      <div class="who reveal">
+        <div><div class="emoji">💼</div><h3>Working professionals</h3><p>Build an export side business alongside your job.</p></div>
+        <div><div class="emoji">🌾</div><h3>Farmers &amp; FPOs</h3><p>Take your produce directly to global markets.</p></div>
+        <div><div class="emoji">🏠</div><h3>Students &amp; homemakers</h3><p>Start from home with a small budget.</p></div>
+        <div><div class="emoji">🏭</div><h3>Traders &amp; makers</h3><p>Grow from local customers to global buyers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="band reveal">
+    <div class="wrap">
+      <blockquote>“Low budget? Start with <em>planning.</em>”</blockquote>
+      <cite>Import-Export Business · Complete Guide</cite>
+    </div>
+  </div>
+
+  <!-- Order: shipping label -->
+  <section class="order-sec" id="order">
+    <div class="wrap">
+      <div class="label reveal">
+        <div class="left"><img src="assets/book-cover.jpg" alt="Import-Export Business Complete Guide book cover" width="740" height="950" loading="lazy" /></div>
+        <div class="right">
+          <div class="label-top"><span>Ship to: <b>Your doorstep</b></span><span>Item: 1 × Printed book</span></div>
+          <h2>Import-Export Business — Complete Guide</h2>
+          <p style="color:var(--ink-soft);margin:0">All the way to your first export shipment.</p>
+          <div class="fields">
+            <div><small>Language</small><strong>English</strong></div>
+            <div><small>Format</small><strong>Hard copy</strong></div>
+            <div><small>Level</small><strong>Beginner</strong></div>
+          </div>
+          <div class="price-line js-price-row" hidden>
+            <span class="price-now js-price"></span>
+            <span class="price-mrp js-mrp"></span>
+            <span class="price-save js-save" hidden></span>
+          </div>
+          <ul class="incl">
+            <li>Step-by-step guide in simple English</li>
+            <li>Product, buyer, IEC, customs &amp; shipping</li>
+            <li>Agri-export &amp; e-commerce export</li>
+            <li>Documents &amp; safe payment methods</li>
+          </ul>
+          <div class="order-ctas">
+            <a class="btn js-buy" href="#order">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L22 7H6"/></svg>
+              Buy now
+            </a>
+            <a class="btn btn-wa js-wa" href="#" hidden>Order on WhatsApp</a>
+          </div>
+          <div class="barcode" aria-hidden="true"></div>
+          <div class="barcode-t" aria-hidden="true">NOVIRA · EXIM · FIRST · SHIPMENT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap faq">
+      <div class="reveal">
+        <span class="kicker">FAQ</span>
+        <h2>Questions,<br /><em>answered.</em></h2>
+      </div>
+      <div class="reveal">
+        <details><summary>Is this book for complete beginners?</summary><p>Yes. It starts from the basics and walks you step by step until your first export shipment. No prior experience is needed.</p></details>
+        <details><summary>Which language is the book in?</summary><p>Simple, easy-to-understand English.</p></details>
+        <details><summary>Is it an eBook or a printed book?</summary><p>It is a printed hard copy, delivered to your address.</p></details>
+        <details><summary>Can I start with a low budget?</summary><p>Yes. There is a dedicated section on low-budget options, cost estimation and planning so you can start small.</p></details>
+        <details><summary>Does it cover agricultural exports?</summary><p>Yes — the agri-export process, packaging, required documents and finding foreign buyers for farm produce.</p></details>
+        <details><summary>Can I do this alongside my job?</summary><p>Yes. Many exporters start part-time. The book helps you plan your first shipment at your own pace.</p></details>
+        <details><summary>How long does delivery take?</summary><p>It depends on your location. You'll receive order and shipping details after purchase.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="end">
+    <div class="wrap reveal">
+      <h2>Where to start?<br />Right here.</h2>
+      <p style="font-size:1.15rem;opacity:.9">Every step, in simple English.</p>
+      <a class="btn js-buy" href="#order">Get your copy now</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="row">
+        <a class="logo" href="#top">Novira<span>.</span>Exim</a>
+        <div class="links">
+          <a href="#contents">Contents</a>
+          <a href="#faq">FAQ</a>
+          <a class="js-email" href="#" hidden></a>
+          <a class="js-phone" href="#" hidden></a>
+        </div>
+      </div>
+      <p class="fine">© <span id="year"></span> Novira Exim. All rights reserved. This book is an educational guide. Export regulations and procedures change over time — always verify current requirements with the relevant authorities before trading.</p>
+    </div>
+  </footer>
+
+  <div class="buybar">
+    <div class="t">Import-Export Complete Guide<span class="js-price">Printed hard copy</span></div>
+    <a class="btn js-buy" href="#order">Buy now</a>
+  </div>
+
+  <script>
+    /* ================================================================
+       EDIT THESE VALUES — price, payment link and contact details.
+       Leave a value empty ("") to hide it on the page.
+       ================================================================ */
+    const CONFIG = {
+      price: "",          // e.g. "₹499"
+      mrp: "",            // e.g. "₹999" (shown struck-through)
+      saveText: "",       // e.g. "50% OFF"
+      buyUrl: "",         // payment / checkout link (Razorpay, Instamojo, Cosmofeed, etc.)
+      whatsapp: "",       // number with country code, digits only, e.g. "919876543210"
+      email: "",          // e.g. "contact@noviraexim.com"
+      phone: ""           // e.g. "+91 98765 43210"
+    };
+
+    (function () {
+      const $$ = (s) => document.querySelectorAll(s);
+      const waMsg = encodeURIComponent("Hi, I want to order the Import-Export Business Complete Guide (English) book.");
+      const waUrl = CONFIG.whatsapp ? "https://wa.me/" + CONFIG.whatsapp + "?text=" + waMsg : "";
+      const buyHref = CONFIG.buyUrl || waUrl;
+
+      if (buyHref) {
+        $$(".js-buy").forEach((a) => { a.href = buyHref; a.target = "_blank"; a.rel = "noopener"; });
+      }
+      if (waUrl && CONFIG.buyUrl) {
+        $$(".js-wa").forEach((a) => { a.href = waUrl; a.target = "_blank"; a.rel = "noopener"; a.hidden = false; });
+      }
+      if (CONFIG.price) {
+        $$(".js-price").forEach((el) => (el.textContent = CONFIG.price));
+        $$(".js-price-row").forEach((el) => (el.hidden = false));
+      }
+      if (CONFIG.mrp) $$(".js-mrp").forEach((el) => (el.textContent = CONFIG.mrp));
+      if (CONFIG.saveText) $$(".js-save").forEach((el) => { el.textContent = CONFIG.saveText; el.hidden = false; });
+      if (CONFIG.email) $$(".js-email").forEach((a) => { a.href = "mailto:" + CONFIG.email; a.textContent = CONFIG.email; a.hidden = false; });
+      if (CONFIG.phone) $$(".js-phone").forEach((a) => { a.href = "tel:" + CONFIG.phone.replace(/\s/g, ""); a.textContent = CONFIG.phone; a.hidden = false; });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const items = $$(".reveal");
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        items.forEach((el) => io.observe(el));
+      } else {
+        items.forEach((el) => el.classList.add("in"));
+      }
+    })();
+  </script>
+</body>
+</html>

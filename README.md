@@ -3,11 +3,14 @@
 Static landing page for the book **Import-Export Business Complete Guide — All the Way to Your First Export Shipment** (English, printed hard copy).
 
 ## Files
-- `index.html` — the whole page (HTML + CSS + a little JS, no build step)
+- `index.html` — design 1: dark navy + gold (matches the ad creatives)
+- `v2.html` — design 2: light editorial, table-of-contents + shipping-label order card
+
+Each page is self-contained (HTML + CSS + a little JS, no build step). Pick one and rename it to `index.html` when deploying.
 - `assets/` — banner creatives and the cropped book cover
 
 ## Before going live
-Open `index.html`, scroll to the `CONFIG` block near the bottom and fill in:
+Open the page you use, scroll to the `CONFIG` block near the bottom and fill in:
 
 | Key        | Example                           | Effect |
 |------------|-----------------------------------|--------|
