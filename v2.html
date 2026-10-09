@@ -8,6 +8,8 @@
   <meta property="og:title" content="Import-Export Business Complete Guide — Until Your First Export Shipment" />
   <meta property="og:description" content="Product, buyer, IEC, customs, shipping, documents and payment — explained step by step in simple English. Printed hard copy." />
   <meta property="og:image" content="assets/book-mockup.jpg" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
@@ -66,7 +68,8 @@
     header { padding: 20px 0; }
     header .wrap { display: flex; justify-content: space-between; align-items: center; }
     .logo { font: 800 1.35rem "Fraunces", serif; text-decoration: none; letter-spacing: -.01em; }
-    .logo span { color: var(--orange); }
+    .logo img { height: 44px; width: auto; display: block; }
+    footer .logo img { height: 52px; }
     header nav { display: flex; gap: 28px; align-items: center; font-weight: 500; }
     header nav a { text-decoration: none; }
     header nav a:not(.btn):hover { color: var(--orange); }
@@ -302,12 +305,12 @@
 
   <header>
     <div class="wrap">
-      <a class="logo" href="#top">Novira<span>.</span>Exim</a>
+      <a class="logo" href="#top" aria-label="Novira Exim home"><img src="assets/logo.png" alt="Novira Exim" width="507" height="160" /></a>
       <nav>
         <a href="#contents">Contents</a>
         <a href="#who">Who it's for</a>
         <a href="#faq">FAQ</a>
-        <a class="btn js-buy" href="#order">Order the book</a>
+        <a class="btn js-buy" href="https://rzp.io/rzp/import-export-english-book">Order the book</a>
       </nav>
     </div>
   </header>
@@ -320,7 +323,7 @@
         <h1>Your first <span class="u">export shipment</span> starts on page one.</h1>
         <p class="lead">Want to start an export business from home but don't know where to begin? This book takes you from <strong>choosing a product</strong> to <strong>getting paid by a foreign buyer</strong> — every step, in simple English.</p>
         <div class="hero-cta">
-          <a class="btn js-buy" href="#order">
+          <a class="btn js-buy" href="https://rzp.io/rzp/import-export-english-book">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2zM22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/></svg>
             Get your copy
           </a>
@@ -355,7 +358,7 @@
         <span class="kicker">Low budget? Start with planning</span>
         <h2>First <em>understand.</em><br />Then decide.</h2>
         <p class="lead">Most beginners get stuck on the same six questions. This book answers them in order — before you spend a single rupee.</p>
-        <a class="btn js-buy" href="#order">Get the answers</a>
+        <a class="btn js-buy" href="https://rzp.io/rzp/import-export-english-book">Get the answers</a>
       </div>
       <ol class="q-list">
         <li class="reveal"><div><h3>How do I select a product?</h3><p>Research demand, check export potential and pick a product that suits your budget.</p></div></li>
@@ -478,7 +481,7 @@
             <li>Documents &amp; safe payment methods</li>
           </ul>
           <div class="order-ctas">
-            <a class="btn js-buy" href="#order">
+            <a class="btn js-buy" href="https://rzp.io/rzp/import-export-english-book">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L22 7H6"/></svg>
               Buy now
             </a>
@@ -514,14 +517,14 @@
     <div class="wrap reveal">
       <h2>Where to start?<br />Right here.</h2>
       <p style="font-size:1.15rem;opacity:.9">Every step, in simple English.</p>
-      <a class="btn js-buy" href="#order">Get your copy now</a>
+      <a class="btn js-buy" href="https://rzp.io/rzp/import-export-english-book">Get your copy now</a>
     </div>
   </section>
 
   <footer>
     <div class="wrap">
       <div class="row">
-        <a class="logo" href="#top">Novira<span>.</span>Exim</a>
+        <a class="logo" href="#top" aria-label="Novira Exim home"><img src="assets/logo-light.png" alt="Novira Exim" width="507" height="160" loading="lazy" /></a>
         <div class="links">
           <a href="#contents">Contents</a>
           <a href="#faq">FAQ</a>
@@ -535,7 +538,7 @@
 
   <div class="buybar">
     <div class="t">Import-Export Complete Guide<span class="js-price">Printed hard copy</span></div>
-    <a class="btn js-buy" href="#order">Buy now</a>
+    <a class="btn js-buy" href="https://rzp.io/rzp/import-export-english-book">Buy now</a>
   </div>
 
   <script>
@@ -547,7 +550,7 @@
       price: "",          // e.g. "₹499"
       mrp: "",            // e.g. "₹999" (shown struck-through)
       saveText: "",       // e.g. "50% OFF"
-      buyUrl: "",         // payment / checkout link (Razorpay, Instamojo, Cosmofeed, etc.)
+      buyUrl: "https://rzp.io/rzp/import-export-english-book", // Razorpay payment link
       whatsapp: "",       // number with country code, digits only, e.g. "919876543210"
       email: "",          // e.g. "contact@noviraexim.com"
       phone: ""           // e.g. "+91 98765 43210"
@@ -560,7 +563,7 @@
       const buyHref = CONFIG.buyUrl || waUrl;
 
       if (buyHref) {
-        $$(".js-buy").forEach((a) => { a.href = buyHref; a.target = "_blank"; a.rel = "noopener"; });
+        $$(".js-buy").forEach((a) => { a.href = buyHref; });
       }
       if (waUrl && CONFIG.buyUrl) {
         $$(".js-wa").forEach((a) => { a.href = waUrl; a.target = "_blank"; a.rel = "noopener"; a.hidden = false; });
