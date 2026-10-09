@@ -20,6 +20,7 @@ Open the page you use, scroll to the `CONFIG` block near the bottom and fill in:
 | `buyUrl`   | Razorpay / Instamojo payment link | All "Buy / Order" buttons go here |
 | `whatsapp` | `"919876543210"`                  | WhatsApp order button (used for Buy buttons if `buyUrl` is empty) |
 | `email`, `phone` | —                           | Shown in footer |
+| `testimonials` (index.html) | `{ quote, name, place, rating }` | Real reader reviews in the "Readers" section |
 
 Empty values are hidden automatically.
 

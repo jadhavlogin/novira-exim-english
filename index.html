@@ -283,6 +283,62 @@
     .sticky-cta .btn { padding: 13px 20px; font-size: .95rem; }
 
     /* Reveal */
+
+    /* Readers / testimonials */
+    .proof-sec { background: var(--bg-soft); }
+    .proof { display: grid; grid-template-columns: 1.05fr .8fr 1fr; gap: 22px; margin-top: 44px; align-items: stretch; }
+    .proof-card {
+      position: relative; margin: 0; border-radius: 20px; overflow: hidden; background: var(--navy-900);
+      box-shadow: var(--shadow); border: 3px solid #fff; outline: 1px solid var(--line);
+    }
+    .proof-card { display: flex; }
+    .proof-card .media-box { position: relative; flex: 1; min-height: 460px; }
+    .proof-card img, .proof-card video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+    .proof-tag, .proof-badge, .vid-toggle { z-index: 1; }
+    .proof-badge {
+      position: absolute; left: 12px; right: 12px; bottom: 12px; display: flex; align-items: center; gap: 10px;
+      background: rgba(7,26,61,.88); color: #fff; backdrop-filter: blur(6px);
+      padding: 10px 14px; border-radius: 12px; font: 600 .9rem/1.3 "Poppins", sans-serif;
+    }
+    .proof-badge .dot { flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--gold-400); box-shadow: 0 0 0 4px rgba(255,203,71,.25); }
+    .proof-tag {
+      position: absolute; top: 12px; left: 12px; background: var(--gold-500); color: var(--navy-900);
+      font: 700 .72rem/1 "Poppins", sans-serif; letter-spacing: .08em; text-transform: uppercase; padding: 7px 10px; border-radius: 999px;
+    }
+    .vid-toggle {
+      position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; border-radius: 50%; border: 0; cursor: pointer;
+      background: rgba(7,26,61,.75); color: #fff; display: grid; place-items: center;
+    }
+    .vid-toggle svg { width: 18px; height: 18px; }
+    .vid-toggle:focus-visible, .proof:focus-visible { outline: 3px solid var(--gold-500); outline-offset: 2px; }
+
+    .proof-side { display: flex; flex-direction: column; gap: 16px; }
+    .review {
+      background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 22px; position: relative;
+      box-shadow: 0 2px 10px rgba(7,26,61,.05);
+    }
+    .review::before {
+      content: "\201C"; position: absolute; top: 4px; right: 16px; font: 800 4rem/1 "Poppins", sans-serif; color: var(--gold-300); opacity: .7;
+    }
+    .review .stars { color: var(--gold-500); letter-spacing: 2px; font-size: 1rem; margin-bottom: 8px; }
+    .review p { margin: 0 0 14px; color: var(--ink); }
+    .review .who { display: flex; align-items: center; gap: 10px; }
+    .review .avatar {
+      width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; flex: none;
+      background: var(--navy-900); color: var(--gold-400); font: 700 .95rem "Poppins", sans-serif;
+    }
+    .review .who b { display: block; font: 600 .95rem "Poppins", sans-serif; color: var(--navy-800); }
+    .review .who span { font-size: .85rem; color: var(--muted); }
+    .proof-points {
+      flex: 1; background: var(--navy-900); color: #fff; border-radius: 20px; padding: 28px;
+      display: flex; flex-direction: column; justify-content: center; box-shadow: var(--shadow);
+    }
+    .proof-points h3 { font-size: 1.35rem; margin-bottom: 6px; }
+    .proof-points > p { color: rgba(255,255,255,.75); }
+    .proof-points .checks { margin: 8px 0 24px; }
+    .proof-points .btn { align-self: flex-start; }
+    .swipe-hint { display: none; text-align: center; color: var(--muted); font-size: .85rem; margin-top: 12px; }
+
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.in { opacity: 1; transform: none; }
     @media (prefers-reduced-motion: reduce) {
@@ -304,6 +360,8 @@
       .order .price-row, .order .secure { justify-content: center; }
       .order .btn { margin-left: auto; margin-right: auto; }
       .split .media { order: -1; }
+      .proof { grid-template-columns: 1fr 1fr; }
+      .proof-side { grid-column: 1 / -1; }
     }
     @media (max-width: 720px) {
       section { padding: 56px 0; }
@@ -315,6 +373,17 @@
       .steps { grid-template-columns: repeat(2, 1fr); }
       .sticky-cta { display: flex; }
       .price-tag { right: 0; }
+      .proof {
+        display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+        margin: 32px -16px 0; padding: 4px 16px 10px; scrollbar-width: none;
+      }
+      .proof::-webkit-scrollbar { display: none; }
+      .proof > * { flex: 0 0 82%; scroll-snap-align: center; }
+      .proof-card .media-box { min-height: 0; aspect-ratio: 3 / 4.2; }
+      .proof-side { grid-column: auto; }
+      .proof-points { padding: 22px; }
+      .proof-points .btn { width: 100%; }
+      .swipe-hint { display: block; }
     }
   </style>
 </head>
@@ -329,6 +398,7 @@
       </a>
       <nav>
         <a class="link" href="#inside">What's Inside</a>
+        <a class="link" href="#readers">Readers</a>
         <a class="link" href="#who">Who It's For</a>
         <a class="link" href="#faq">FAQ</a>
         <a class="btn js-buy" href="#order">Order Now</a>
@@ -541,6 +611,51 @@
     </div>
   </section>
 
+  <!-- ===== Readers / testimonials ===== -->
+  <section class="proof-sec" id="readers">
+    <div class="wrap">
+      <div class="center reveal">
+        <span class="eyebrow">Real readers · Real books</span>
+        <h2>From our desk to readers' hands</h2>
+        <p class="lead">Printed copies, handed over in person and shipped to readers who are starting their export journey.</p>
+      </div>
+      <div class="proof" tabindex="0" aria-label="Photos, video and reviews from readers">
+        <figure class="proof-card reveal">
+          <div class="media-box">
+            <span class="proof-tag">Reader</span>
+            <img src="assets/reader-handover.jpg" alt="The author handing over a printed copy of the export book to a reader at the book stall" loading="lazy" width="941" height="1400" />
+            <figcaption class="proof-badge"><span class="dot"></span>Copy handed over to a reader</figcaption>
+          </div>
+        </figure>
+        <figure class="proof-card reveal">
+          <div class="media-box">
+            <span class="proof-tag">Book stall</span>
+            <video class="js-proof-video" src="assets/book-stall.mp4" poster="assets/book-stall-poster.jpg" muted loop playsinline preload="metadata" aria-label="Short video of printed copies of the book at our book stall"></video>
+            <button class="vid-toggle js-vid-toggle" type="button" aria-label="Play video">
+              <svg class="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" hidden><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+            </button>
+            <figcaption class="proof-badge"><span class="dot"></span>Fresh printed copies, ready to ship</figcaption>
+          </div>
+        </figure>
+        <div class="proof-side reveal">
+          <div class="js-reviews" hidden></div>
+          <div class="proof-points">
+            <h3>Printed. Packed. Delivered.</h3>
+            <p>Every copy is a real printed book — the same one you see in these photos.</p>
+            <ul class="checks">
+              <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>Printed hard copy, not a PDF</li>
+              <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>Simple English, step by step</li>
+              <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>Delivered to your doorstep</li>
+            </ul>
+            <a class="btn js-buy" href="#order">Get your copy</a>
+          </div>
+        </div>
+      </div>
+      <p class="swipe-hint" aria-hidden="true">Swipe to see more →</p>
+    </div>
+  </section>
+
   <!-- ===== Order ===== -->
   <section class="order" id="order">
     <div class="wrap">
@@ -638,7 +753,13 @@
       buyUrl: "",         // payment / checkout link (Razorpay, Instamojo, Cosmofeed, etc.)
       whatsapp: "",       // number with country code, digits only, e.g. "919876543210"
       email: "",          // e.g. "contact@noviraexim.com"
-      phone: ""           // e.g. "+91 98765 43210"
+      phone: "",          // e.g. "+91 98765 43210"
+
+      // Real reader reviews — copy the example line, remove the "//", fill in.
+      // Shown above the "Printed. Packed. Delivered." card. Leave empty to hide.
+      testimonials: [
+        // { quote: "Very easy to understand. I applied for my IEC the same week.", name: "Reader Name", place: "Pune", rating: 5 },
+      ]
     };
 
     (function () {
@@ -667,6 +788,68 @@
       if (CONFIG.phone) $$(".js-phone").forEach((a) => { a.href = "tel:" + CONFIG.phone.replace(/\s/g, ""); a.textContent = CONFIG.phone; a.hidden = false; });
 
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Reader reviews (built with textContent — safe for any text you paste)
+      const reviewsBox = document.querySelector(".js-reviews");
+      if (reviewsBox && CONFIG.testimonials && CONFIG.testimonials.length) {
+        CONFIG.testimonials.forEach((t) => {
+          const card = document.createElement("article");
+          card.className = "review";
+          const stars = document.createElement("div");
+          stars.className = "stars";
+          const r = Math.max(0, Math.min(5, Number(t.rating) || 5));
+          stars.textContent = "★".repeat(r) + "☆".repeat(5 - r);
+          stars.setAttribute("aria-label", r + " out of 5 stars");
+          const q = document.createElement("p");
+          q.textContent = t.quote || "";
+          const who = document.createElement("div");
+          who.className = "who";
+          const av = document.createElement("span");
+          av.className = "avatar";
+          av.textContent = (t.name || "?").trim().charAt(0).toUpperCase();
+          const meta = document.createElement("div");
+          const nm = document.createElement("b");
+          nm.textContent = t.name || "";
+          const pl = document.createElement("span");
+          pl.textContent = t.place || "";
+          meta.append(nm, pl);
+          who.append(av, meta);
+          card.append(stars, q, who);
+          reviewsBox.append(card);
+        });
+        reviewsBox.style.display = "grid";
+        reviewsBox.style.gap = "16px";
+        reviewsBox.hidden = false;
+      }
+
+      // Book-stall video: autoplay (muted) only while on screen
+      const vid = document.querySelector(".js-proof-video");
+      const vbtn = document.querySelector(".js-vid-toggle");
+      if (vid && vbtn) {
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        let userPaused = reduce;
+        const sync = () => {
+          const playing = !vid.paused;
+          vbtn.querySelector(".i-play").hidden = playing;
+          vbtn.querySelector(".i-pause").hidden = !playing;
+          vbtn.setAttribute("aria-label", playing ? "Pause video" : "Play video");
+        };
+        vid.addEventListener("play", sync);
+        vid.addEventListener("pause", sync);
+        vbtn.addEventListener("click", () => {
+          if (vid.paused) { userPaused = false; vid.play().catch(() => {}); }
+          else { userPaused = true; vid.pause(); }
+        });
+        if ("IntersectionObserver" in window) {
+          new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting && !userPaused) vid.play().catch(() => {});
+              else if (!e.isIntersecting) vid.pause();
+            });
+          }, { threshold: 0.4 }).observe(vid);
+        }
+      }
+
 
       // Scroll reveal
       const items = $$(".reveal");
