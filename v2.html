@@ -7,7 +7,7 @@
   <meta name="description" content="Import-Export Business Complete Guide — every step from product selection to your first export shipment, in simple English. Printed hard copy." />
   <meta property="og:title" content="Import-Export Business Complete Guide — Until Your First Export Shipment" />
   <meta property="og:description" content="Product, buyer, IEC, customs, shipping, documents and payment — explained step by step in simple English. Printed hard copy." />
-  <meta property="og:image" content="assets/complete-guide.jpg" />
+  <meta property="og:image" content="assets/book-mockup.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
@@ -74,7 +74,7 @@
 
     /* Hero */
     .hero { padding: 40px 0 70px; }
-    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; }
     .hero h1 { font-size: clamp(2.6rem, 6.4vw, 5rem); }
     .hero h1 .u { position: relative; white-space: nowrap; }
     .hero h1 .u::after {
@@ -93,11 +93,11 @@
       background: radial-gradient(circle at 50% 60%, var(--orange-soft), var(--amber) 55%, transparent 72%); opacity: .55;
     }
     .stage img.cover {
-      position: relative; width: min(340px, 78%); border-radius: 4px 10px 10px 4px;
-      box-shadow: -14px 24px 40px rgba(20,33,61,.35); transform: rotate(-4deg);
+      position: relative; width: 100%; border-radius: 18px; border: 2px solid var(--ink);
+      box-shadow: 10px 10px 0 var(--ink); transform: rotate(-1.5deg);
     }
     .sticker {
-      position: absolute; right: 2%; bottom: 12%; width: 128px; height: 128px; border-radius: 50%;
+      position: absolute; right: -14px; bottom: -26px; width: 128px; height: 128px; border-radius: 50%;
       background: var(--ink); color: var(--cream); display: grid; place-items: center; text-align: center;
       font: 700 .78rem/1.25 "DM Sans", sans-serif; text-transform: uppercase; letter-spacing: .06em;
       transform: rotate(10deg); border: 3px dashed var(--amber); outline: 6px solid var(--ink);
@@ -185,14 +185,14 @@
     /* Shipping-label order card */
     .order-sec { background: var(--sand); }
     .label {
-      display: grid; grid-template-columns: 280px 1fr; background: var(--paper);
+      display: grid; grid-template-columns: 1fr 1.1fr; background: var(--paper);
       border: 2px solid var(--ink); border-radius: 22px; box-shadow: 10px 10px 0 var(--ink); overflow: hidden;
     }
     .label .left {
       background: var(--ink); padding: 34px 28px; display: grid; place-items: center; position: relative;
       border-right: 2px dashed var(--cream);
     }
-    .label .left img { width: 100%; max-width: 210px; border-radius: 3px 8px 8px 3px; box-shadow: 0 18px 30px rgba(0,0,0,.4); }
+    .label .left img { width: 100%; border-radius: 12px; box-shadow: 0 18px 30px rgba(0,0,0,.4); }
     .label .right { padding: 34px 38px; }
     .label-top { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font: 500 .78rem "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-soft); padding-bottom: 16px; border-bottom: 2px solid var(--ink); margin-bottom: 22px; }
     .label-top b { color: var(--orange); }
@@ -270,16 +270,15 @@
       .who > div:nth-child(-n+2) { border-bottom: 2px solid var(--ink); }
       .label { grid-template-columns: 1fr; }
       .label .left { border-right: 0; border-bottom: 2px dashed var(--cream); }
-      .label .left img { max-width: 170px; }
     }
     @media (max-width: 640px) {
       section { padding: 64px 0; }
       .wrap { padding: 0 16px; }
       header nav a:not(.btn) { display: none; }
       .hero { padding-top: 10px; }
-      .stage img.cover { width: 220px; }
+      .stage img.cover { box-shadow: 6px 6px 0 var(--ink); }
       .hero-cta .btn:not(.btn-plain) { width: 100%; }
-      .sticker { width: 104px; height: 104px; font-size: .68rem; right: 0; }
+      .sticker { width: 96px; height: 96px; font-size: .64rem; right: 2px; bottom: -22px; }
       .sticker b { font-size: 1.2rem; }
       .route { grid-template-columns: 1fr 1fr; }
       .paths { grid-template-columns: 1fr; }
@@ -335,7 +334,7 @@
       </div>
       <div class="stage reveal">
         <div class="sun"></div>
-        <img class="cover" src="assets/book-cover.jpg" alt="Import-Export Business Complete Guide — All the Way to Your First Export Shipment, book cover" width="740" height="950" />
+        <img class="cover" src="assets/book-mockup.jpg" alt="Import-Export Business: A Complete Guide — Up to your first Export Shipment, printed copies of the book on a desk" width="1600" height="1096" />
         <div class="sticker"><div><b class="js-price">Printed</b>Hard copy<br />delivered</div></div>
       </div>
     </div>
@@ -457,7 +456,7 @@
   <section class="order-sec" id="order">
     <div class="wrap">
       <div class="label reveal">
-        <div class="left"><img src="assets/book-cover.jpg" alt="Import-Export Business Complete Guide book cover" width="740" height="950" loading="lazy" /></div>
+        <div class="left"><img src="assets/book-mockup.jpg" alt="Import-Export Business: A Complete Guide, printed book" width="1600" height="1096" loading="lazy" /></div>
         <div class="right">
           <div class="label-top"><span>Ship to: <b>Your doorstep</b></span><span>Item: 1 × Printed book</span></div>
           <h2>Import-Export Business — Complete Guide</h2>
